@@ -49,7 +49,7 @@ function render(type, text) {
 
 /^[[:space:]]*# @file/ {
     sub(/^[[:space:]]*# @file /, "")
-    filedoc = render("h1", $1) "\n"
+    filedoc = render("h1", $0) "\n"
 }
 
 /^[[:space:]]*# @brief/ {
